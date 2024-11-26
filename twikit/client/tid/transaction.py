@@ -8,10 +8,10 @@ import hashlib
 import httpx
 from functools import reduce
 from typing import Union, List
-from tid.cubic_curve import Cubic
-from tid.interpolate import interpolate
-from tid.rotation import convert_rotation_to_matrix
-from tid.util import float_to_hex, is_odd, base64_encode
+from .cubic_curve import Cubic
+from .interpolate import interpolate
+from .rotation import convert_rotation_to_matrix
+from .util import float_to_hex, is_odd, base64_encode
 
 ON_DEMAND_FILE_REGEX = re.compile(
     r"""['|\"]{1}ondemand\.s['|\"]{1}:\s*['|\"]{1}([\w]*)['|\"]{1}""", flags=(re.VERBOSE | re.MULTILINE))
